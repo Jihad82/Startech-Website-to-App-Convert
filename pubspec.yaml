@@ -23,4 +23,5 @@ flutter:
   assets:
     - assets/images/
     - assets/images/img1.png
-    # Adjust the path to your actual asset directory
+    - assets/images/category/
+    - assets/images/product/

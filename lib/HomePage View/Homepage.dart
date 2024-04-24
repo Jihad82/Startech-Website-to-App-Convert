@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:startacapp/HomePage%20View/ProductSection.dart';
 import 'package:startacapp/utils/colors.dart';
 import 'package:startacapp/utils/CustomButton.dart';
 import 'package:startacapp/utils/CustomCard.dart';
-import 'package:startacapp/utils/CategoriesCard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
@@ -13,6 +13,73 @@ class HomePage extends StatelessWidget {
     List<String> imageList = [
       'assets/images/images1.png',
       'assets/images/img1.png',
+    ];
+
+    List<Map<String, String>> Category = [
+      {
+        'title': 'AC',
+        'icon': 'assets/images/category/ac-48x48.png',
+      },
+      {
+        'title': 'Drone',
+        'icon': 'assets/images/category/drone-48x48.png',
+      },
+      {
+        'title': 'Gimbal',
+        'icon': 'assets/images/category/gimbal-48x48.png',
+      },
+      {
+        'title': 'Laptop',
+        'icon': 'assets/images/category/laptop-48x48.png',
+      },
+      {
+        'title': 'Laptop Accessories',
+        'icon': 'assets/images/category/laptop-acc-icon-48x48.png',
+      },
+      {
+        'title': 'TV',
+        'icon': 'assets/images/category/tv-48x48.png',
+      },
+      {
+        'title': 'Mobile Phone',
+        'icon': 'assets/images/category/mobile-phone-48x48.png',
+      },
+      {
+        'title': 'Mobile Accessories',
+        'icon': 'assets/images/category/mobile-phone-accessories-48x48.png',
+      },
+      {
+        'title': 'Portable Power',
+        'icon': 'assets/images/category/powerstation-48x48.png',
+      },
+      {
+        'title': 'VR (Virtual Reality)',
+        'icon': 'assets/images/category/vr-48x48.png',
+      },
+      {
+        'title': 'Smart Watch',
+        'icon': 'assets/images/category/smart-watch-48x48.png',
+      },
+      {
+        'title': 'Action Camera',
+        'icon': 'assets/images/category/action-camera-48x48.png',
+      },
+      {
+        'title': 'Headphone',
+        'icon': 'assets/images/category/headphone-48x48.png',
+      },
+      {
+        'title': 'Earbuds',
+        'icon': 'assets/images/category/earbuds-48x48.png',
+      },
+      {
+        'title': 'Bluetooth Speakers',
+        'icon': 'assets/images/category/bt-speaker-48x48.png',
+      },
+      {
+        'title': 'Gaming Console',
+        'icon': 'assets/images/category/gaming-console-48x48.png',
+      },
     ];
 
     return Scaffold(
@@ -175,115 +242,104 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        const Row(
-                          children: [
-                            Text(
-                              'Featured Category',
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Spacer(),
-                          ],
-                        ),
-                        const Row(
-                          children: [
-                            Text(
-                              'Get Your Desired Product from Featured Category!',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
-                        GridView.count(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          crossAxisCount: 3,
-                          children: const [
-                            CategoriesCard(
-                              title: 'AC',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/ac-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Drone',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/drone-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Gimbal',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/gimbal-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Laptop',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/laptop-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Laptop Accessories',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/brand-logo/laptop-acc-icon-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'TV',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/tv-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Mobile Phone',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/mobile-phone-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Mobile Accessories',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/mobile-phone-accessories-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Portable Power Station',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/powerstation-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'VR (Virtual Reality)',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/vr-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Smart Watch',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/smart-watch-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Action Camera',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/action-camera-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Headphone',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/headphone-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Earbuds',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/earbuds-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Bluetooth Speakers',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/bt-speaker-48x48.png',
-                            ),
-                            CategoriesCard(
-                              title: 'Gaming Console',
-                              imageUrl: 'https://www.startech.com.bd/image/cache/catalog/category-thumb/gaming-console-48x48.png',
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+              const SizedBox(height: 20,),
+              const Text(
+                'Featured Category',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
+              const SizedBox(height: 10,),
+
+              const Text(
+                'Get Your Desired Product from Featured Category!',
+                style: TextStyle(
+                  fontSize: 14.0,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(height: 20,),
+
+              GridView.builder(
+                primary: false,
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 15,
+                  mainAxisSpacing: 15,
+                  childAspectRatio: .8,
+                ),
+                itemBuilder: (context, index) {
+                  return Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Colors.black.withOpacity(.1),
+                      ),
+                    ),
+                    child: Center(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network(
+                            Category[index]['icon']!,
+                            width: 30,
+                            height: 30,
+                          ),
+                          Text(
+                            Category[index]['title']!,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+                itemCount: Category.length,
+              ),
+              const SizedBox(height: 20,),
+              const ProductSections(),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Appcolors.primaryColor,
+        currentIndex: 0,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Offers',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.flash_on),
+            label: 'Happy Hour',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.important_devices),
+            label: 'PC Builder',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_add),
+            label: 'Compare (0)',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
+          ),
+        ],
+        selectedItemColor: Appcolors.primaryColor,
+        unselectedItemColor: Appcolors.primaryColor.withOpacity(.8),
+        onTap: (int index) {
+          // Handle navigation here
+        },
       ),
     );
   }
