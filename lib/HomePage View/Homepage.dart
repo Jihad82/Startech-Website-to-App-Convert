@@ -130,16 +130,15 @@ class HomePage extends StatelessWidget {
                     },
                   );
                 }).toList(),
-                options: CarouselOptions(
+               options: CarouselOptions(
                   height: 150,
                   aspectRatio: 16 / 9,
-                  viewportFraction: 0.8,
+                  viewportFraction: 1,
                   initialPage: 0,
                   enableInfiniteScroll: true,
-                  reverse: false,
                   autoPlay: true,
-                  autoPlayInterval: const Duration(seconds: 3),
-                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                  autoPlayInterval: const Duration(seconds: 7),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 1100),
                   enlargeCenterPage: true,
                   enlargeFactor: 0.3,
                   onPageChanged: (index, reason) {
